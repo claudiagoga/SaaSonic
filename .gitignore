@@ -1,0 +1,55 @@
+## Build output
+bin/
+obj/
+out/
+
+## Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## .NET
+*.dll
+*.exe
+*.pdb
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Sensitive configuration — each developer keeps their own local copy
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/appsettings.*.local.json
+
+## .NET User Secrets (stored outside the repo by default, but just in case)
+secrets.json
+
+## Environment files
+.env
+.env.*
+!.env.example
+
+## Logs
+*.log
+logs/
+
+## Claude Code local settings
+.claude/settings.local.json
+
+## VS Code local settings
+.vscode/
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml

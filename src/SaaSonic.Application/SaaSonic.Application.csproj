@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaaSonic.Domain\SaaSonic.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="MediatR" Version="14.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AuditLogs\" />
+    <Folder Include="AuditLogs\Queries\" />
+    <Folder Include="Common\Helpers\" />
+    <Folder Include="Invitations\" />
+    <Folder Include="Invitations\Commands\" />
+    <Folder Include="Invitations\Queries\" />
+    <Folder Include="Members\Commands\" />
+    <Folder Include="Members\Queries\" />
+    <Folder Include="Subscriptions\" />
+    <Folder Include="Subscriptions\Commands\" />
+    <Folder Include="Subscriptions\Queries\" />
+    <Folder Include="Subscriptions\Webhooks\" />
+    <Folder Include="Users\" />
+    <Folder Include="Users\Commands\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
