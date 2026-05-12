@@ -57,17 +57,13 @@ public sealed class LoginCommandHandler : IRequestHandler<LoginCommand, LoginRes
         var emailLower = request.Email.ToLowerInvariant();
 
         var user = await _db.Users
-            .Include(u => u.AuthIdentities)
             .Include(u => u.SystemRole)
             .FirstOrDefaultAsync(u => u.Email == emailLower, cancellationToken);
 
         if (user is null || !user.IsActive)
             throw new UnauthorizedException("Invalid email or password.");
 
-        var localIdentity = user.AuthIdentities
-            .FirstOrDefault(ai => ai.Provider == AuthProvider.Local);
-
-        if (localIdentity is null || user.PasswordHash is null)
+        if (user.PasswordHash is null)
             throw new UnauthorizedException("This account uses social login. Please sign in with your provider.");
 
         if (!_passwordHasher.Verify(request.Password, user.PasswordHash))
