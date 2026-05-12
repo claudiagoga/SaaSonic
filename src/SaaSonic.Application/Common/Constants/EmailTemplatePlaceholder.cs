@@ -14,4 +14,10 @@ public static class EmailTemplatePlaceholder
 
     /// <summary>Raw token value, when it must appear directly in the body.</summary>
     public const string Token = "Token";
+
+    /// <summary>Name of the workspace being referenced.</summary>
+    public const string WorkspaceName = "WorkspaceName";
+
+    /// <summary>Display name of the user who sent an invitation.</summary>
+    public const string InviterName = "InviterName";
 }

@@ -10,4 +10,5 @@ public static class EmailTemplateSlug
     public const string EmailVerification = "email-verification";
     public const string PasswordReset = "password-reset";
     public const string Welcome = "welcome";
+    public const string WorkspaceInvitation = "workspace-invitation";
 }
